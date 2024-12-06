@@ -1,0 +1,39 @@
+X = Done, O = Omitted
+[X] Look into graphs for the train model and controller
+[X] Add speed up factor to the test bench
+[X] Fix the ways g's are reported
+[X] Fix units
+[O] Look into multiple y axes https://stackoverflow.com/questions/29473757/pyqtgraph-multiple-y-axis-on-left-side
+[X] when people board offboard need to update train mass
+[O] have an issue when self.velocity is small, train brake force is thru the roof
+[O] station names should be a drop down and maybe have another drop down to select what line
+[X] interior and exterior lights need to come on during night time?
+    Maddie will have an internal clock on train and it will turn on at night time.
+[O] drop down for L and R side
+[O] add drop downs for wherever makes sense
+[O] UI colors need to be the same
+[O] limit graph y axis cause hard to see.
+[O] power is confusing as well, maybe show input power as well?
+[X] train does not roll backwards
+[X] Multiple trains!!
+[X] the track module provides the number of passengers that are onboarding. create / modify existing functions to allow this to happen.
+[X] Make it so when you click on tab on main window or test bench, it auto pulls up the corresponding tab
+[O] Add a tab on the main page where u can select multiple trains when applying ebrake or the failures
+[X] add position calc
+[X] add position calc to output
+[X] karen send me when i enter a new block  
+[X] make new block reset position to zero 
+[O] add an auto or manual mode and have it switch between what commanded speed it uses for the test bench, like the one from the double spin box or the one from the track circuit
+[X] display input power on testbench?
+[X] fix left panel spacing on testbench
+[X] set min row size for the top panel
+[X] make graphing OPTIONAL, and make it a popup window. add a button to main UI. do the same with the temp control graph? or just delete temp control graph?
+[ ] do an experiment. time with the constant braking and time with the dynamic breaking. see what it yields
+[O] get rid of the sleep delay and change it to something using timer
+
+-------------------------------------------------------------------------------------------
+INTEGRATION
+
+[ ] Doors open on model UI but then get stuck and dont close.
+[ ] light turing on when tunnel flag is flase
+

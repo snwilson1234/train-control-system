@@ -1,0 +1,12 @@
+VAR ctc_request_loc = 0
+VAR ctc_speed = 0
+VAR ctc_auth = 0
+VAR ctc_swpos = 0
+VAR block_status_list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+VAR sw_38 = 0
+VAR sw_38_lights = [0,0,0]
+VAR sw_44 = 0
+VAR sw_44_lights = [0,0,0]
+VAR crossing_10 = 0
+
+VAR return_val = <func>

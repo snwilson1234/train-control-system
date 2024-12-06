@@ -1,0 +1,26 @@
+VAR ctc_request_loc_10 = 0
+VAR ctc_speed_10 = 0
+VAR ctc_auth_10 = 0
+VAR ctc_swpos_10 = 0
+VAR block_status_list_10 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+VAR sw_38 = 0
+VAR sw_38_lights = [0,0,0]
+VAR sw_44 = 0
+VAR sw_44_lights = [0,0,0]
+VAR crossing_10 = 0
+VAR sw_block_10 = 39
+VAR sw_block_10_2 = 44
+
+
+
+
+
+
+
+
+
+
+VAR updated_speed_auth_10 = wayside10_update_speed_auth(ctc_request_loc_10, ctc_speed_10, ctc_auth_10, ctc_swpos_10, block_status_list_10, sw_38, sw_38_lights, sw_44, sw_44_lights, crossing_10)
+VAR updated_switch_10 = wayside10_update_switch(ctc_request_loc_10, ctc_speed_10, ctc_auth_10, ctc_swpos_10, block_status_list_10, sw_38, sw_38_lights, sw_44, sw_44_lights, crossing_10)
+VAR updated_lights_10 = wayside10_update_lights(ctc_request_loc_10, ctc_speed_10, ctc_auth_10, ctc_swpos_10, block_status_list_10, sw_38, sw_38_lights, sw_44, sw_44_lights, crossing_10)
+VAR updated_crossing_10 = wayside10_update_crossing(ctc_request_loc_10, ctc_speed_10, ctc_auth_10, ctc_swpos_10, block_status_list_10, sw_38, sw_38_lights, sw_44, sw_44_lights, crossing_10)

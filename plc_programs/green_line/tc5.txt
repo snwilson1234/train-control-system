@@ -1,0 +1,224 @@
+FUN wayside5_update_speed_auth(ctc_request_loc_5, ctc_speed_5, ctc_auth_5, ctc_swpos_5, block_status_list_5, sw_77, sw_77_lights)
+    IF ctc_speed_5 > 20 THEN
+        IF ctc_auth_5 > 150 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        ELIF ctc_auth_5 <= 150 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_auth_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 76 AND block_status_list_5/2 == 1 AND (block_status_list_5/3 == 1 OR block_status_list_5/4 == 1 OR block_status_list_5/5 == 1 OR block_status_list_5/6 == 1 OR block_status_list_6/0 == 1 OR block_status_list_6/0 == 1 OR block_status_list_6/1 == 1 OR block_status_list_6/2 == 1 OR block_status_list_6/3 == 1 OR block_status_list_6/4 == 1 OR block_status_list_6/5 == 1 OR block_status_list_6/6 == 1 OR block_status_list_6/7 == 1 OR block_status_list_6/8 == 1 OR block_status_list_6/9 == 1 OR block_status_list_6/10 == 1 OR block_status_list_6/11 == 1 OR block_status_list_6/12 == 1 OR block_status_list_6/13 == 1 OR block_status_list_6/14 == 1 OR block_status_list_6/15 == 1 OR block_status_list_6/16 == 1 OR block_status_list_6/17 == 1 OR block_status_list_6/18 == 1 OR block_status_list_6/19 == 1) THEN
+        RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+    END
+
+    IF ctc_request_loc_5 == 74 AND block_status_list_5/0 == 1 THEN
+        IF block_status_list_5/1 == 1 OR block_status_list_5/2 == 1 OR block_status_list_5/3 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 75 AND block_status_list_5/1 == 1 THEN
+        IF block_status_list_5/2 == 1 OR block_status_list_5/3 == 1 OR block_status_list_5/4 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 76 AND block_status_list_5/2 == 1 THEN
+        IF block_status_list_5/3 == 1 OR block_status_list_5/4 == 1 OR block_status_list_5/5 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 77 AND block_status_list_5/3 == 1 THEN
+        IF block_status_list_5/4 == 1 OR block_status_list_5/5 == 1 OR block_status_list_5/6 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 78 AND block_status_list_5/4 == 1 THEN
+        IF block_status_list_5/5 == 1 OR block_status_list_5/6 == 1 OR block_status_list_6/0 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 79 AND block_status_list_5/5 == 1 THEN
+        IF block_status_list_5/6 == 1 OR block_status_list_6/0 == 1 OR block_status_list_6/1 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 80 AND block_status_list_5/6 == 1 THEN
+        IF block_status_list_6/0 == 1 OR block_status_list_6/1 == 1 OR block_status_list_6/2 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 101 AND block_status_list_5/7 == 1 THEN
+        IF block_status_list_5/8 == 1 OR block_status_list_5/9 == 1 OR block_status_list_5/10 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 102 AND block_status_list_5/8 == 1 THEN
+        IF block_status_list_5/9 == 1 OR block_status_list_5/10 == 1 OR block_status_list_5/11 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 103 AND block_status_list_5/9 == 1 THEN
+        IF block_status_list_5/10 == 1 OR block_status_list_5/11 == 1 OR block_status_list_5/12 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 104 AND block_status_list_5/10 == 1 THEN
+        IF block_status_list_5/11 == 1 OR block_status_list_5/12 == 1 OR block_status_list_5/13 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 105 AND block_status_list_5/11 == 1 THEN
+        IF block_status_list_5/12 == 1 OR block_status_list_5/13 == 1 OR block_status_list_5/14 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 106 AND block_status_list_5/12 == 1 THEN
+        IF block_status_list_5/13 == 1 OR block_status_list_5/14 == 1 OR block_status_list_5/15 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 107 AND block_status_list_5/13 == 1 THEN
+        IF block_status_list_5/14 == 1 OR block_status_list_5/15 == 1 OR block_status_list_5/16 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 108 AND block_status_list_5/14 == 1 THEN
+        IF block_status_list_5/15 == 1 OR block_status_list_5/16 == 1 OR block_status_list_5/17 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 109 AND block_status_list_5/15 == 1 THEN
+        IF block_status_list_5/16 == 1 OR block_status_list_5/17 == 1 OR block_status_list_5/18 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 110 AND block_status_list_5/16 == 1 THEN
+        IF block_status_list_5/17 == 1 OR block_status_list_5/18 == 1 OR block_status_list_5/19 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 111 AND block_status_list_5/17 == 1 THEN
+        IF block_status_list_5/18 == 1 OR block_status_list_5/19 == 1 OR block_status_list_5/20 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 112 AND block_status_list_5/18 == 1 THEN
+        IF block_status_list_5/19 == 1 OR block_status_list_5/20 == 1 OR block_status_list_5/21 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 113 AND block_status_list_5/19 == 1 THEN
+        IF block_status_list_5/20 == 1 OR block_status_list_5/21 == 1 OR block_status_list_5/22 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 114 AND block_status_list_5/20 == 1 THEN
+        IF block_status_list_5/21 == 1 OR block_status_list_5/22 == 1 OR block_status_list_5/23 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 115 AND block_status_list_5/21 == 1 THEN
+        IF block_status_list_5/22 == 1 OR block_status_list_5/23 == 1 OR block_status_list_5/24 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 116 AND block_status_list_5/22 == 1 THEN
+        IF block_status_list_5/23 == 1 OR block_status_list_5/24 == 1 OR block_status_list_5/25 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 117 AND block_status_list_5/23 == 1 THEN
+        IF block_status_list_5/24 == 1 OR block_status_list_5/25 == 1 OR block_status_list_5/26 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 118 AND block_status_list_5/24 == 1 THEN
+        IF block_status_list_5/25 == 1 OR block_status_list_5/26 == 1 OR block_status_list_5/27 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 119 AND block_status_list_5/25 == 1 THEN
+        IF block_status_list_5/26 == 1 OR block_status_list_5/27 == 1 OR block_status_list_2/12 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 120 AND block_status_list_5/26 == 1 THEN
+        IF block_status_list_5/27 == 1 OR block_status_list_2/12 == 1 OR block_status_list_2/13 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+    IF ctc_request_loc_5 == 121 AND block_status_list_5/27 == 1 THEN
+        IF block_status_list_2/12 == 1 OR block_status_list_2/13 == 1 OR block_status_list_2/14 == 1 THEN
+            RETURN [ctc_request_loc_5, 0, ctc_request_loc_5]
+        END
+    END
+
+
+    RETURN [ctc_request_loc_5, ctc_speed_5, ctc_auth_5]
+END
+
+FUN wayside5_update_switch(ctc_request_loc_5, ctc_speed_5, ctc_auth_5, ctc_swpos_5, block_status_list_5, sw_77, sw_77_lights)
+    IF block_status_list_5/1 == 1 OR block_status_list_5/2 == 1 THEN
+        IF block_status_list_5/3 == 1 OR block_status_list_5/4 == 1 OR block_status_list_5/5 == 1 OR block_status_list_5/6 == 1 OR block_status_list_6/0 == 1 OR block_status_list_6/1 == 1 OR block_status_list_6/2 == 1 OR block_status_list_6/3 == 1 OR block_status_list_6/4 == 1 OR block_status_list_6/5 == 1 OR block_status_list_6/6 == 1 OR block_status_list_6/7 == 1 OR block_status_list_6/8 == 1 OR block_status_list_6/9 == 1 OR block_status_list_6/10 == 1 OR block_status_list_6/11 == 1 OR block_status_list_6/12 == 1 OR block_status_list_6/13 == 1 OR block_status_list_6/14 == 1 OR block_status_list_6/15 == 1 OR block_status_list_6/16 == 1 OR block_status_list_6/17 == 1 OR block_status_list_6/18 == 1 OR block_status_list_6/19 == 1 THEN
+            RETURN 0
+        END
+    END
+    IF block_status_list_5/3 == 1 AND block_status_list_5/2 == 0 AND block_status_list_5/7 == 0 THEN
+        RETURN 0
+    END
+    RETURN 1
+END
+
+FUN wayside5_update_lights(ctc_request_loc_5, ctc_speed_5, ctc_auth_5, ctc_swpos_5, block_status_list_5, sw_77, sw_77_lights)
+    
+    IF block_status_list_5/1 == 1 OR block_status_list_5/2 == 1 THEN
+        IF block_status_list_5/3 == 1 OR block_status_list_5/4 == 1 OR block_status_list_5/5 == 1 OR block_status_list_5/6 == 1 OR block_status_list_6/0 == 1 OR block_status_list_6/1 == 1 OR block_status_list_6/2 == 1 OR block_status_list_6/3 == 1 OR block_status_list_6/4 == 1 OR block_status_list_6/5 == 1 OR block_status_list_6/6 == 1 OR block_status_list_6/7 == 1 OR block_status_list_6/8 == 1 OR block_status_list_6/9 == 1 OR block_status_list_6/10 == 1 OR block_status_list_6/11 == 1 OR block_status_list_6/12 == 1 OR block_status_list_6/13 == 1 OR block_status_list_6/14 == 1 OR block_status_list_6/15 == 1 OR block_status_list_6/16 == 1 OR block_status_list_6/17 == 1 OR block_status_list_6/18 == 1 OR block_status_list_6/19 == 1 THEN
+            RETURN [1,1,0]
+        END
+    END
+    IF block_status_list_5/3 == 1 AND block_status_list_5/2 == 0 AND block_status_list_5/7 == 0 THEN
+        RETURN [1,1,0]
+    END
+    RETURN [1,0,1]
+END
+
+1
+
+1
+2
+3
+4
+"START OUTPUTS"
+RUN("./plc_programs/green_line/var_files/tc5_vars.txt")
+updated_speed_auth_5
+updated_switch_5
+updated_lights_5
+0
+sw_block_5
+block_status_list_5

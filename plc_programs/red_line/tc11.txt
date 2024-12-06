@@ -1,0 +1,31 @@
+FUN wayside11_update_speed_auth(ctc_request_loc_11, ctc_speed_11, ctc_auth_11, ctc_swpos_11, block_status_list_11, sw_52, sw_52_lights)
+    RETURN [ctc_request_loc_11,ctc_speed_11,ctc_auth_11]
+END
+
+FUN wayside11_update_switch(ctc_request_loc_11, ctc_speed_11, ctc_auth_11, ctc_swpos_11, block_status_list_11, sw_52, sw_52_lights)
+    IF block_status_list_11/2 == 1 OR block_status_list_11/3 == 1 OR block_status_list_11/4 == 1 THEN
+        RETURN 0
+    END
+    RETURN 1
+END
+
+FUN wayside11_update_lights(ctc_request_loc_11, ctc_speed_11, ctc_auth_11, ctc_swpos_11, block_status_list_11, sw_52, sw_52_lights)
+    IF block_status_list_11/2 == 1 OR block_status_list_11/3 == 1 OR block_status_list_11/4 == 1 THEN
+        RETURN [1,1,0]
+    END
+    RETURN [1,0,1]
+END
+
+1
+
+1
+2
+3
+4
+"START OUTPUTS"
+RUN("./plc_programs/red_line/var_files/tc11_vars.txt")
+updated_speed_auth_11
+updated_switch_11
+updated_lights_11
+0
+sw_block_11

@@ -1,0 +1,6 @@
+VAR ctc_command_pos = 15
+VAR ctc_speed = 10
+VAR ctc_auth = 15
+VAR bsl = [0,0,0,0,0]
+VAR tc1b_sig = 0
+VAR return_val = test_func(ctc_speed)

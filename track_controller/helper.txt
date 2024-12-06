@@ -1,0 +1,8 @@
+--Open Qt Designer
+pyqt6-tools designer
+
+--Create python file from .ui file made in designer
+
+pyuic6 -x test_ui_in_designer.ui -o test.py
+
+track_controller_ui.controller_view.btn_set_switch.clicked.connect(tmw.tm.set_switch)

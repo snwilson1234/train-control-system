@@ -1,0 +1,42 @@
+FUN wayside9_update_speed_auth(ctc_request_loc_9, ctc_speed_9, ctc_auth_9, ctc_swpos_9, block_status_list_9, sw_27, sw_27_lights, sw_33, sw_33_lights)
+    RETURN [ctc_request_loc_9,ctc_speed_9,ctc_auth_9]
+END
+
+FUN wayside9_update_switch1(ctc_request_loc_9, ctc_speed_9, ctc_auth_9, ctc_swpos_9, block_status_list_9, sw_27, sw_27_lights, sw_33, sw_33_lights)
+    
+    IF (block_status_list_9/5 == 1 OR block_status_list_9/6 == 1) AND block_status_list_9/7 == 0 AND block_status_list_9/8 == 0 AND block_status_list_9/17 == 0 AND block_status_list_9/18 == 0 THEN
+        RETURN 0
+    END
+
+    RETURN 1
+END
+
+FUN wayside9_update_switch2(ctc_request_loc_9, ctc_speed_9, ctc_auth_9, ctc_swpos_9, block_status_list_9, sw_27, sw_27_lights, sw_33, sw_33_lights)
+    IF (block_status_list_9/11 == 1 OR block_status_list_9/12 == 1) THEN
+        RETURN 1
+    END
+
+    RETURN 0
+END
+
+FUN wayside9_update_lights(ctc_request_loc_9, ctc_speed_9, ctc_auth_9, ctc_swpos_9, block_status_list_9, sw_27, sw_27_lights, sw_33, sw_33_lights)
+    IF (block_status_list_9/5 == 1 OR block_status_list_9/6 == 1) AND block_status_list_9/7 == 0 AND block_status_list_9/8 == 0 AND block_status_list_9/17 == 0 AND block_status_list_9/18 == 0 THEN
+        RETURN [1,1,0]
+    END
+
+    RETURN [1,0,1]
+END
+
+
+1
+2
+3
+4
+"START OUTPUTS"
+RUN("./plc_programs/red_line/var_files/tc9_vars.txt")
+updated_speed_auth_9
+updated_switch_9
+updated_lights_9
+0
+sw_block_9
+sw_block_9_2

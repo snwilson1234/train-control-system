@@ -1,0 +1,38 @@
+FUN wayside2_update_speed_auth(ctc_request_loc_2, ctc_speed_2, ctc_auth_2, ctc_swpos_2, block_status_list_2, sw_29, sw_29_lights)
+    IF ctc_speed_2 > 20 THEN
+        IF ctc_auth_2 > 150 THEN
+            RETURN [ctc_request_loc_2, 0, 0]
+        ELIF ctc_auth_2 <= 150 THEN
+            RETURN [ctc_request_loc_2, 0, ctc_auth_2]
+        END
+    END
+
+    IF block_status_list_1/0 == 1 THEN
+        RETURN [1,1,1]
+    END
+    RETURN [ctc_request_loc_2, ctc_speed_2, ctc_auth_2]
+END
+
+FUN wayside2_update_switch(ctc_request_loc_2, ctc_speed_2, ctc_auth_2, ctc_swpos_2, block_status_list_2, sw_29, sw_29_lights)
+    RETURN ctc_swpos_2
+END
+
+FUN wayside2_update_lights(ctc_request_loc_2, ctc_speed_2, ctc_auth_2, ctc_swpos_2, block_status_list_2, sw_29, sw_29_lights)
+    RETURN [1,1,0]
+END
+
+FUN wayside2_update_crossing(ctc_request_loc_2, ctc_speed_2, ctc_auth_2, ctc_swpos_2, block_status_list_2, sw_29, sw_29_lights)
+    RETURN 0
+END
+
+1
+2
+3
+4
+"START OUTPUTS"
+RUN("./plc_programs/green_line/var_files/tc2_vars.txt")
+updated_speed_auth_2
+updated_switch_2
+updated_lights_2
+updated_crossing_2
+sw_block_2

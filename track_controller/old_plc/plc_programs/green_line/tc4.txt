@@ -1,0 +1,141 @@
+FUN wayside4_update_speed_auth(ctc_request_loc_4, ctc_speed_4, ctc_auth_4, ctc_swpos_4, block_status_list_4, sw_63, sw_63_lights)
+    IF ctc_speed_4 > 20 THEN
+        IF ctc_auth_4 > 150 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        ELIF ctc_auth_4 <= 150 THEN
+            RETURN [ctc_request_loc_4, 0, ctc_auth_4]
+        END
+    END
+
+    IF ctc_request_loc_4 == 58 THEN
+        IF block_status_list_4/1 == 1 OR block_status_list_4/2 == 1 OR block_status_list_4/3 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 59 THEN
+        IF block_status_list_4/2 == 1 OR block_status_list_4/3 == 1 OR block_status_list_4/4 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 60 THEN
+        IF block_status_list_4/3 == 1 OR block_status_list_4/4 == 1 OR block_status_list_4/5 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 61 THEN
+        IF block_status_list_4/4 == 1 OR block_status_list_4/5 == 1 OR block_status_list_4/6 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 62 THEN
+        IF block_status_list_4/5 == 1 OR block_status_list_4/6 == 1 OR block_status_list_4/7 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 63 THEN
+        IF block_status_list_4/6 == 1 OR block_status_list_4/7 == 1 OR block_status_list_4/8 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 64 THEN
+        IF block_status_list_4/7 == 1 OR block_status_list_4/8 == 1 OR block_status_list_4/9 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 65 THEN
+        IF block_status_list_4/10 == 1 OR block_status_list_4/11 == 1 OR block_status_list_4/12 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 66 THEN
+        IF block_status_list_4/11 == 1 OR block_status_list_4/12 == 1 OR block_status_list_4/13 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 67 THEN
+        IF block_status_list_4/12 == 1 OR block_status_list_4/13 == 1 OR block_status_list_4/14 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 68 THEN
+        IF block_status_list_4/13 == 1 OR block_status_list_4/14 == 1 OR block_status_list_4/15 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 69 THEN
+        IF block_status_list_4/14 == 1 OR block_status_list_4/15 == 1 OR block_status_list_5/0 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 70 THEN
+        IF block_status_list_4/15 == 1 OR block_status_list_5/0 == 1 OR block_status_list_5/1 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 71 THEN
+        IF block_status_list_5/0 == 1 OR block_status_list_5/1 == 1 OR block_status_list_5/2 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 72 THEN
+        IF block_status_list_5/1 == 1 OR block_status_list_5/2 == 1 OR block_status_list_5/3 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    IF ctc_request_loc_4 == 73 THEN
+        IF block_status_list_5/2 == 1 OR block_status_list_5/3 == 1 OR block_status_list_5/4 == 1 THEN
+            RETURN [ctc_request_loc_4, 0, 0]
+        END
+    END
+
+    RETURN [ctc_request_loc_4, ctc_speed_4, ctc_auth_4]
+END
+
+FUN wayside4_update_switch(ctc_request_loc_4, ctc_speed_4, ctc_auth_4, ctc_swpos_4, block_status_list_4, sw_63, sw_63_lights)
+    IF ctc_swpos_4 == 1 THEN
+        IF block_status_list_4/0 == 1 OR block_status_list_4/1 == 1 OR block_status_list_4/2 == 1 OR block_status_list_4/3 == 1 OR block_status_list_4/4 == 1 OR block_status_list_4/5 == 1 OR block_status_list_4/6 == 1 OR block_status_list_4/7 == 1 OR block_status_list_4/8 == 1 THEN
+            RETURN 0
+        END
+    END
+    RETURN 1
+END
+
+FUN wayside4_update_lights(ctc_request_loc_4, ctc_speed_4, ctc_auth_4, ctc_swpos_4, block_status_list_4, sw_63, sw_63_lights)
+    IF ctc_swpos_4 == 1 THEN
+        IF block_status_list_4/0 == 1 OR block_status_list_4/1 == 1 OR block_status_list_4/2 == 1 OR block_status_list_4/3 == 1 OR block_status_list_4/4 == 1 OR block_status_list_4/5 == 1 OR block_status_list_4/6 == 1 OR block_status_list_4/7 == 1 OR block_status_list_4/8 == 1 THEN
+            RETURN [1, 1, 0]
+        END
+    END
+    RETURN [1, 0, 1]
+END
+
+FUN wayside4_update_crossing(ctc_request_loc_4, ctc_speed_4, ctc_auth_4, ctc_swpos_4, block_status_list_4, sw_63, sw_63_lights)
+    RETURN 0
+END
+
+1
+2
+3
+4
+"START OUTPUTS"
+RUN("./plc_programs/green_line/var_files/tc4_vars.txt")
+updated_speed_auth_4
+updated_switch_4
+updated_lights_4
+updated_crossing_4
+sw_block_4

@@ -1,0 +1,34 @@
+FUN wayside3_update_speed_auth(ctc_request_loc_3, ctc_speed_3, ctc_auth_3, ctc_swpos_3, block_status_list_3, sw_57, sw_57_lights)
+    IF ctc_speed_3 > 20 THEN
+        IF ctc_auth_3 > 150 THEN
+            RETURN [ctc_request_loc_3, 0, 0]
+        ELIF ctc_auth_3 <= 150 THEN
+            RETURN [ctc_request_loc_3, 0, ctc_auth_3]
+        END
+    END
+    RETURN [ctc_request_loc_3, ctc_speed_3, ctc_auth_3]
+END
+
+FUN wayside3_update_switch(ctc_request_loc_3, ctc_speed_3, ctc_auth_3, ctc_swpos_3, block_status_list_3, sw_57, sw_57_lights)
+    RETURN ctc_swpos_3
+END
+
+FUN wayside3_update_lights(ctc_request_loc_3, ctc_speed_3, ctc_auth_3, ctc_swpos_3, block_status_list_3, sw_57, sw_57_lights)
+    RETURN [0,0,0]
+END
+
+FUN wayside3_update_crossing(ctc_request_loc_3, ctc_speed_3, ctc_auth_3, ctc_swpos_3, block_status_list_3, sw_57, sw_57_lights)
+    RETURN 0
+END
+
+1
+2
+3
+4
+"START OUTPUTS"
+RUN("./plc_programs/green_line/var_files/tc3_vars.txt")
+updated_speed_auth_3
+updated_switch_3
+updated_lights_3
+updated_crossing_3
+sw_block_3

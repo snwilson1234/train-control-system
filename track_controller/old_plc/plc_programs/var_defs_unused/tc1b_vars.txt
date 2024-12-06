@@ -1,0 +1,19 @@
+
+VAR train_loc = 0
+VAR sug_speed = 0
+VAR sug_auth = 0
+VAR msg = [train_loc, sug_speed, sug_auth]
+
+VAR b1 = 0
+VAR b2 = 0
+VAR b3 = 0
+VAR b4 = 0
+VAR b5 = 0
+VAR bsl = [b1, b2, b3, b4, b5]
+
+VAR sw_loc = 0
+VAR sw_pos = 0
+VAR sw_list = [[sw_loc, sw_pos]]
+
+VAR tc2b_sig = 0
+VAR tc3b_sig = 0

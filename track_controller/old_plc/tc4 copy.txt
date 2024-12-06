@@ -1,0 +1,17 @@
+FUN check_ctc_command(ctc_speed, ctc_auth, ctc_swpos, block_status_list, sw_63, sw_63_lights)
+    VAR sw_update = ctc_swpos
+    VAR lights_update = sw_63_lights
+
+    IF block_status_list/2 == 1 OR block_status_list/3 == 1 OR block_status_list/4 == 1 THEN
+        VAR sw_update = 0
+        VAR lights_update = [0,1,0]
+        print("[TRACK CONTROLLER]: hello")
+    ELSE
+        VAR lights_update = [1,0,1]
+    END
+    
+    RETURN [sw_update,lights_update]
+END
+
+RUN("./plc_programs/green_line/var_files/tc4_vars.txt")
+return_val

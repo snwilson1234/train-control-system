@@ -1,0 +1,25 @@
+VAR ctc_request_loc_9 = 0
+VAR ctc_speed_9 = 0
+VAR ctc_auth_9 = 0
+VAR ctc_swpos_9 = 0
+VAR block_status_list_9 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+VAR sw_27 = 0
+VAR sw_27_lights = [0,0,0]
+VAR sw_33 = 0
+VAR sw_33_lights = [0,0,0]
+VAR sw_block_9 = 27
+VAR sw_block_9_2 = 33
+
+
+
+
+
+
+
+
+
+
+VAR updated_switch_9_2 = wayside9_update_switch2(ctc_request_loc_9, ctc_speed_9, ctc_auth_9, ctc_swpos_9, block_status_list_9, sw_27, sw_27_lights, sw_33, sw_33_lights)
+VAR updated_speed_auth_9 = wayside9_update_speed_auth(ctc_request_loc_9, ctc_speed_9, ctc_auth_9, ctc_swpos_9, block_status_list_9, sw_27, sw_27_lights, sw_33, sw_33_lights)
+VAR updated_switch_9 = wayside9_update_switch1(ctc_request_loc_9, ctc_speed_9, ctc_auth_9, ctc_swpos_9, block_status_list_9, sw_27, sw_27_lights, sw_33, sw_33_lights)
+VAR updated_lights_9 = wayside9_update_lights(ctc_request_loc_9, ctc_speed_9, ctc_auth_9, ctc_swpos_9, block_status_list_9, sw_27, sw_27_lights, sw_33, sw_33_lights)

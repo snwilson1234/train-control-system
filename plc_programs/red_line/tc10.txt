@@ -1,0 +1,39 @@
+FUN wayside10_update_speed_auth(ctc_request_loc_10, ctc_speed_10, ctc_auth_10, ctc_swpos_10, block_status_list_10, sw_38, sw_38_lights, sw_44, sw_44_lights, crossing_10)
+    RETURN [ctc_request_loc_10,ctc_speed_10,ctc_auth_10]
+END
+
+FUN wayside10_update_switch(ctc_request_loc_10, ctc_speed_10, ctc_auth_10, ctc_swpos_10, block_status_list_10, sw_38, sw_38_lights, sw_44, sw_44_lights, crossing_10)
+    IF (block_status_list_10/2 == 1 OR block_status_list_10/3 == 1) AND block_status_list_10/4 == 0 AND block_status_list_10/5 == 0 AND block_status_list_10/17 == 0 AND block_status_list_10/18 == 0 THEN
+        RETURN 0
+    END
+
+    RETURN 1
+END
+
+FUN wayside10_update_lights(ctc_request_loc_10, ctc_speed_10, ctc_auth_10, ctc_swpos_10, block_status_list_10, sw_38, sw_38_lights, sw_44, sw_44_lights, crossing_10)
+    IF (block_status_list_10/2 == 1 OR block_status_list_10/3 == 1) AND block_status_list_10/4 == 0 AND block_status_list_10/5 == 0 AND block_status_list_10/17 == 0 AND block_status_list_10/18 == 0 THEN
+        RETURN [1,1,0]
+    END
+
+    RETURN [1,0,1]
+END
+
+FUN wayside10_update_crossing(ctc_request_loc_10, ctc_speed_10, ctc_auth_10, ctc_swpos_10, block_status_list_10, sw_38, sw_38_lights, sw_44, sw_44_lights, crossing_10)
+    IF (block_status_list_10/11 == 1 OR block_status_list_10/12 == 1 OR block_status_list_10/13 == 1) THEN
+        RETURN 1
+    END
+    
+    RETURN 0
+END
+
+1
+2
+3
+4
+"START OUTPUTS"
+RUN("./plc_programs/red_line/var_files/tc10_vars.txt")
+updated_speed_auth_10
+updated_switch_10
+updated_lights_10
+updated_crossing_10
+sw_block_10

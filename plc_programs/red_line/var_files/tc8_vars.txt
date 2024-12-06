@@ -1,0 +1,23 @@
+VAR ctc_request_loc_8 = 0
+VAR ctc_speed_8 = 0
+VAR ctc_auth_8 = 0
+VAR ctc_swpos_8 = 0
+VAR block_status_list_8 = [0, 0, 0, 0, 0, 0]
+VAR sw_9 = 0
+VAR sw_9_lights = 0
+VAR sw_block_8 = 9 
+
+
+
+
+
+
+
+
+
+
+
+
+VAR updated_speed_auth_8 = wayside8_update_speed_auth(ctc_request_loc_8, ctc_speed_8, ctc_auth_8, ctc_swpos_8, block_status_list_8, sw_9, sw_9_lights)
+VAR updated_switch_8 = wayside8_update_switch(ctc_request_loc_8, ctc_speed_8, ctc_auth_8, ctc_swpos_8, block_status_list_8, sw_9, sw_9_lights)
+VAR updated_lights_8 = wayside8_update_lights(ctc_request_loc_8, ctc_speed_8, ctc_auth_8, ctc_swpos_8, block_status_list_8, sw_9, sw_9_lights)

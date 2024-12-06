@@ -1,0 +1,20 @@
+FUN tc1b_update_switch(ctc_swpos,swpos,b1,b2,b3,b4,b5,tc2b_sig,tc3b_sig)
+    
+    IF ctc_swpos == swpos THEN
+        RETURN 0
+    ELSE
+        IF ctc_swpos == 0 THEN
+            IF tc2b_sig == 1 THEN
+                RETURN 0
+            ELIF tc2b_sig == 0 THEN
+                RETURN 1
+            END
+        ELIF ctc_swpos == 1 THEN
+            IF tc3b_sig == 1 THEN
+                RETURN 0
+            ELIF tc3b_sig == 0 THEN
+                RETURN 1
+            END
+        END
+    END
+END

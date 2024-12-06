@@ -1,0 +1,172 @@
+
+FUN wayside1_update_speed_auth(ctc_request_loc_1, ctc_speed_1, ctc_auth_1, ctc_swpos_1, block_status_list_1, sw_13, sw_13_lights, crossing_1)
+    IF ctc_speed_1 > 20 THEN
+        IF ctc_auth_1 > 150 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        ELIF ctc_auth_1 <= 150 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_auth_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 1 AND block_status_list_1/0 == 1 THEN
+        IF block_status_list_1/12 == 1 OR block_status_list_1/13 == 1 OR block_status_list_1/14 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 2 AND block_status_list_1/1 == 1 THEN
+        IF block_status_list_1/0 == 1 OR block_status_list_1/12 == 1 OR block_status_list_1/13 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+
+    END
+
+    IF ctc_request_loc_1 == 3 AND block_status_list_1/2 == 1 THEN
+        IF block_status_list_1/0 == 1 OR block_status_list_1/1 == 1 OR block_status_list_1/12 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 4 AND block_status_list_1/3 == 1 THEN
+        IF block_status_list_1/0 == 1 OR block_status_list_1/1 == 1 OR block_status_list_1/2 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 5 AND block_status_list_1/4 == 1 THEN
+        IF block_status_list_1/1 == 1 OR block_status_list_1/2 == 1 OR block_status_list_1/3 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 6 AND block_status_list_1/5 == 1 THEN
+        IF block_status_list_1/2 == 1 OR block_status_list_1/3 == 1 OR block_status_list_1/4 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 7 AND block_status_list_1/6 == 1 THEN
+        IF block_status_list_1/3 == 1 OR block_status_list_1/4 == 1 OR block_status_list_1/5 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 8 AND block_status_list_1/7 == 1 THEN
+        IF block_status_list_1/4 == 1 OR block_status_list_1/5 == 1 OR block_status_list_1/6 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 9 AND block_status_list_1/8 == 1 THEN
+        IF block_status_list_1/5 == 1 OR block_status_list_1/6 == 1 OR block_status_list_1/7 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 10 AND block_status_list_1/9 == 1 THEN
+        IF block_status_list_1/6 == 1 OR block_status_list_1/7 == 1 OR block_status_list_1/8 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 11 AND block_status_list_1/10 == 1 THEN
+        IF block_status_list_1/7 == 1 OR block_status_list_1/8 == 1 OR block_status_list_1/9 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 12 AND block_status_list_1/11 == 1 THEN
+        IF block_status_list_1/8 == 1 OR block_status_list_1/9 == 1 OR block_status_list_1/10 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 13 AND block_status_list_1/12 == 1 THEN
+        IF block_status_list_1/11 == 1 OR block_status_list_1/10 == 1 OR block_status_list_1/9 == 1 OR block_status_list_1/13 == 1 OR block_status_list_1/14 == 1 OR block_status_list_1/15 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 14 AND block_status_list_1/13 == 1 THEN
+        IF block_status_list_1/14 == 1 OR block_status_list_1/15 == 1 OR block_status_list_1/16 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 15 AND block_status_list_1/14 == 1 THEN
+        IF block_status_list_1/15 == 1 OR block_status_list_1/16 == 1 OR block_status_list_1/17 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 16 AND block_status_list_1/15 == 1 THEN
+        IF block_status_list_1/16 == 1 OR block_status_list_1/17 == 1 OR block_status_list_1/18 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 17 AND block_status_list_1/16 == 1 THEN
+        IF block_status_list_1/17 == 1 OR block_status_list_1/18 == 1 OR block_status_list_1/19 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 18 AND block_status_list_1/17 == 1 THEN
+        IF block_status_list_1/18 == 1 OR block_status_list_1/19 == 1 OR block_status_list_2/0 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 19 AND block_status_list_2/18 == 1 THEN
+        IF block_status_list_1/19 == 1 OR block_status_list_2/0 == 1 OR block_status_list_2/1 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    IF ctc_request_loc_1 == 20 AND block_status_list_2/19 == 1 THEN
+        IF block_status_list_2/0 == 1 OR block_status_list_2/1 == 1 OR block_status_list_2/2 == 1 THEN
+            RETURN [ctc_request_loc_1, 0, ctc_request_loc_1]
+        END
+    END
+
+    RETURN [ctc_request_loc_1, ctc_speed_1, ctc_auth_1]
+END
+
+FUN wayside1_update_switch(ctc_request_loc_1, ctc_speed_1, ctc_auth_1, ctc_swpos_1, block_status_list_1, sw_13, sw_13_lights, crossing_1)
+    
+    IF block_status_list_1/12 == 1 AND block_status_list_1/11 == 0 THEN
+        RETURN 0
+    ELIF block_status_list_1/12 == 0 AND block_status_list_1/0 == 1 THEN
+        RETURN 1
+    END
+    
+    RETURN 0
+END
+
+FUN wayside1_update_lights(ctc_request_loc_1, ctc_speed_1, ctc_auth_1, ctc_swpos_1, block_status_list_1, sw_13, sw_13_lights, crossing_1)
+    IF block_status_list_1/12 == 1 AND block_status_list_1/11 == 0 THEN
+        RETURN [1,1,0]
+    ELIF block_status_list_1/12 == 0 AND block_status_list_1/0 == 1 THEN
+        RETURN [1,0,1]
+    END
+    RETURN [1,1,0]
+END
+
+FUN wayside1_update_crossing(ctc_request_loc_1, ctc_speed_1, ctc_auth_1, ctc_swpos_1, block_status_list_1, sw_13, sw_13_lights, crossing_1)
+    IF block_status_list_1/17 == 1 OR block_status_list_1/18 == 1 OR block_status_list_1/19 == 1 THEN
+        RETURN 1
+    END
+    RETURN 0
+END
+
+1
+2
+3
+4
+"START OUTPUTS"
+RUN("./plc_programs/green_line/var_files/tc1_vars.txt")
+updated_speed_auth_1
+updated_switch_1
+updated_lights_1
+updated_crossing_1
+sw_block_1

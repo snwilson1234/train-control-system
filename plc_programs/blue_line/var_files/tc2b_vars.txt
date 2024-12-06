@@ -1,0 +1,7 @@
+VAR ctc_command_pos = 8
+VAR ctc_speed = 10
+VAR ctc_auth = 15
+VAR bsl = [0,0,0,0,0]
+VAR tc2b_sig = 0
+VAR tc3b_sig = 0
+VAR return_val = check_speed(ctc_speed)

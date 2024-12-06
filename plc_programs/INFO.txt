@@ -1,0 +1,147 @@
+#ctc msgs
+msg = [loc,speed,auth]
+sw_requests = [[loc, pos] ...]
+
+IF looking at switch from bottom of Y:
+    "LEFT" = 0
+    "RIGHT" = 1
+
+TRAFFIC LIGHTS:
+    "RED" = 0
+    "GREEN" = 1
+
+RAILWAY CROSSING:
+    "OPEN/OFF" = 0
+    "CLOSED/ON" = 1
+
+RETURN:
+    "DONT TOGGLE" = 0
+    "YES TOGGLE" = 1
+
+#TC 1B KNOWS ABOUT
+    Occupancies of Blocks 1-5
+    SW
+    Tells TC 2B when SW connected to 6 (SW POS 0)
+    Tells TC 3B when SW conntected to 11 (SW POS 1)
+
+#TC 2B KNOWS ABOUT
+    Occupancies of Blocks 6-10
+    IF SW CONNECTED TO 6
+    Tells TC 1B when train near LIGHT 7 (on block 8)
+
+#TC 3B KNOWS ABOUT
+    Occupancies of Blocks 11-15
+    IF SW CONNECTED TO 11
+
+
+
+msg = [train_loc,speed,auth]
+sw_requests = [[sw_loc, toggle]]
+
+#block status list
+bsl = [b1,b2,b3,b4,b5]
+
+#switches
+sw = [[loc, pos]]
+
+#lights
+lights = []
+
+#crossings
+crossings = []
+
+
+#ctc msgs
+train_loc: int
+speed: int
+auth: int
+msg: list<int>
+
+
+
+#TRACK MODEL -> TRACK CONTROLLER
+
+    #green_line_system.set_block_status([0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+    #green_line_system.controller_list[i].set_block([0 0 0 1 0])
+    #green_line_system.controller_list[i].set_lights([1 1 0])
+    #green_line_system.controller_list[i].set_switch(0) or .switch(0, 0)
+    #green_line_system.controller_list[i].set_railway(0)
+
+
+
+    #TRACK CONTROLLER -> TRACK MODEL
+
+    #tm.set_speed_authority(line, [32 33 205], [50 50 70], [5 4 5])                         <---- split
+    #tm.set_switch(line, block number, bool switch)        tm.set_switch(0, 114, 1)
+    #tm.set_light(line, block number, [light statuses])    tm.set_switch(0, 114, [1 1 0])
+    #tm.set_railway(line, block number, bool rail)         tm.set_switch(0, 114, 1)
+
+#TODO: convert some plc vars into attributes of TC class
+
+#questions for team:
+#can we define some number of block distance trains must be apart?
+#or what is the time between dispatching trains?
+#if a failure appears in front of a train, how can i tell? i know i cant tell directly.
+
+even if they do not try failures during iteration 3 i want to know::
+
+    - is this ctc job?
+    - what happens? ctc tells train to stop? this probably should be my job since im vital.
+    - MAYBE ctc quickly sends "train too close" boolean
+        - i cannot detect motion. plc is not really running loops
+        - it is feasible to say "train too close to dispatch, wait" to ctc,
+            but not anywhere else really.
+
+
+==================================================
+THIS IS WHAT I KNOW:
+
+FOR MY INTEGRATION FOR ITERATION 3
+
+CTC has to say:
+    - "i want switch 63 = 1"
+    - if tc responds with same pos, dispatch train
+
+TM says:
+    - "heres the current switches, lights, railways, occupancies"
+    - "give me new switches, lights, railways, occupancies"
+    - "give me ctc requests"
+
+Ask JJ to make functions like karen did. Very helpful
+
+ISSUE: might need to know num trains in view...
+
+Can CTC send me them sequentially instead of in list??
+    - is this still faster than how long a train would take to travel a block? i would assume so..
+        - in all cases??? i think definitely but ask team.
+        
+EX:
+for trains in tc_view:
+    set_block(loc,speed,authority)
+
+
+
+###SOLVED, but may still be a problem with switch requests??
+        #possible solution, ctc can only request switches at certain blocks (not every block)
+
+
+#
+
+
+#ORDER OF OUTPUT:
+
+CTC outputs first, then track model
+
+#for ctc
+- bsl
+- switches
+
+#for TC
+- speed
+- authority
+- loc
+
+- new switch
+- new lights
+- new crossings
+

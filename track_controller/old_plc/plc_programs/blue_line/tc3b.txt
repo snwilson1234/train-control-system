@@ -1,0 +1,7 @@
+
+FUN test_func(ctc_speed)
+    RETURN "TEST WAYSIDE 3"
+END
+
+RUN("./plc_programs/blue_line/var_files/tc3b_vars.txt")
+return_val

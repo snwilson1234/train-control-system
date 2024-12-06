@@ -1,0 +1,9 @@
+VAR ctc_request_loc = 0
+VAR ctc_speed = 0
+VAR ctc_auth = 0
+VAR ctc_swpos = 0
+VAR block_status_list = [0, 0, 0, 0, 0, 0]
+VAR sw_9 = 0
+VAR sw_9_lights = 0
+
+VAR return_val = <func>

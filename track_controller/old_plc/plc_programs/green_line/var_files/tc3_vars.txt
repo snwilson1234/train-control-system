@@ -1,0 +1,13 @@
+VAR ctc_request_loc_3 = 3
+VAR ctc_speed_3 = 3
+VAR ctc_auth_3 = 3
+VAR ctc_swpos_3 = 0
+VAR block_status_list_3 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+VAR sw_57 = 0
+VAR sw_57_lights = [1, 1, 0]
+VAR sw_block_3 = 24
+
+VAR updated_speed_auth_3 = wayside3_update_speed_auth(ctc_request_loc_3, ctc_speed_3, ctc_auth_3, ctc_swpos_3, block_status_list_3, sw_57, sw_57_lights)
+VAR updated_switch_3 = wayside3_update_switch(ctc_request_loc_3, ctc_speed_3, ctc_auth_3, ctc_swpos_3, block_status_list_3, sw_57, sw_57_lights)
+VAR updated_lights_3 = wayside3_update_lights(ctc_request_loc_3, ctc_speed_3, ctc_auth_3, ctc_swpos_3, block_status_list_3, sw_57, sw_57_lights)
+VAR updated_crossing_3 = wayside3_update_crossing(ctc_request_loc_3, ctc_speed_3, ctc_auth_3, ctc_swpos_3, block_status_list_3, sw_57, sw_57_lights)

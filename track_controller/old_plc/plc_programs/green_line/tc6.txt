@@ -1,0 +1,34 @@
+FUN wayside6_update_speed_auth(ctc_request_loc_6, ctc_speed_6, ctc_auth_6, ctc_swpos_6, block_status_list_6, sw_85, sw_85_lights)
+    IF ctc_speed_6 > 20 THEN
+        IF ctc_auth_6 > 150 THEN
+            RETURN [ctc_request_loc_6, 0, 0]
+        ELIF ctc_auth_6 <= 150 THEN
+            RETURN [ctc_request_loc_6, 0, ctc_auth_6]
+        END
+    END
+    RETURN [ctc_request_loc_6, ctc_speed_6, ctc_auth_6]
+END
+
+FUN wayside6_update_switch(ctc_request_loc_6, ctc_speed_6, ctc_auth_6, ctc_swpos_6, block_status_list_6, sw_85, sw_85_lights)
+    RETURN ctc_swpos_6
+END
+
+FUN wayside6_update_lights(ctc_request_loc_6, ctc_speed_6, ctc_auth_6, ctc_swpos_6, block_status_list_6, sw_85, sw_85_lights)
+    RETURN [0,0,0]
+END
+
+FUN wayside6_update_crossing(ctc_request_loc_6, ctc_speed_6, ctc_auth_6, ctc_swpos_6, block_status_list_6, sw_85, sw_85_lights)
+    RETURN 0
+END
+
+1
+2
+3
+4
+"START OUTPUTS"
+RUN("./plc_programs/green_line/var_files/tc6_vars.txt")
+updated_speed_auth_6
+updated_switch_6
+updated_lights_6
+updated_crossing_6
+sw_block_6

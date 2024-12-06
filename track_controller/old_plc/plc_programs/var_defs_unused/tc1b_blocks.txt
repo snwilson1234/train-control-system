@@ -1,0 +1,6 @@
+VAR b1 = 0
+VAR b2 = 0
+VAR b3 = 0
+VAR b4 = 0
+VAR b5 = 0
+VAR bsl = [b1, b2, b3, b4, b5]

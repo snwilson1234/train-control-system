@@ -1,0 +1,20 @@
+
+FUN tc2b_update_switch(ctc_swpos,swpos,bsl,tc1b_sig)
+    IF ctc_swpos==swpos THEN
+        RETURN [1,1]
+    ELSE
+        RETURN [0,0]
+    END
+END
+
+FUN check_speed(ctc_speed)
+    IF ctc_speed > 45 THEN
+        RETURN "TOO FAST"
+    ELSE
+        RETURN "GOOD SPEED"
+    END
+END
+
+RUN("./plc_programs/blue_line/var_files/tc2b_vars.txt")
+return_val
+return2
